@@ -559,7 +559,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a355fc02e4f2f44cac0fd0b888fc706, type: 2}
+  - {fileID: 2100000, guid: 1473e32e8f31fe24cbbb1a9889294f56, type: 2}
+  - {fileID: 2100000, guid: 1e869aca715d20a409f8836eedabbb26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1420,6 +1421,7 @@ GameObject:
   - component: {fileID: 6290330789993446512}
   - component: {fileID: 9038297681013244489}
   - component: {fileID: 1833674979784169565}
+  - component: {fileID: 7538491730608818676}
   m_Layer: 0
   m_Name: Y Bot_Game
   m_TagString: Untagged
@@ -1456,10 +1458,10 @@ Animator:
   m_GameObject: {fileID: 5451887996075173688}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 800985b9131a4b54ba895f32a8211638, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d248c4a66f2ac34caaf50f883f4842d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -1493,7 +1495,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1833674979784169565
 CapsuleCollider:
@@ -1515,9 +1517,27 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.26
-  m_Height: 1.72
+  m_Height: 1.99
   m_Direction: 1
   m_Center: {x: 0, y: 0.98, z: 0}
+--- !u!114 &7538491730608818676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5451887996075173688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be90bc7262af184fa5f4e52683c2ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  movementSpeed: 3
+  rotationSpeed: 0.1
+  runningSpeedMulitplier: 1.5
+  cameraTransform: {fileID: 0}
+  moveInputAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  runInputAction: {fileID: -7471211009204490832, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!1 &5472188432988103601
 GameObject:
   m_ObjectHideFlags: 0
