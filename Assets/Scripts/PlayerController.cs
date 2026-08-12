@@ -3,14 +3,22 @@ using UnityEngine.InputSystem;
  
 public class PlayerController : MonoBehaviour
 {
+    [Header("Running Settings")]
     [SerializeField] float movementSpeed;
     [SerializeField] float rotationSpeed;
     [SerializeField] float runningSpeedMulitplier;
- 
+
+    [Header("Jump Settings")]
+    [SerializeField] float jumpForce;
+    [SerializeField] Transform groundCheckPoint;
+    [SerializeField] float groundCheckRadius;
+    [SerializeField] LayerMask groundMask;
+    
     [SerializeField] Transform cameraTransform;
  
     [SerializeField] InputActionReference moveInputAction;
     [SerializeField] InputActionReference runInputAction;
+    [SerializeField] private InputActionReference jumpInputAction;
  
     Vector2 moveInput;
  
@@ -22,6 +30,7 @@ public class PlayerController : MonoBehaviour
  
     readonly int walkingAnimatorHash = Animator.StringToHash("Walking");
     readonly int runningAnimatorHash = Animator.StringToHash("Running");
+    readonly int jumpAnimatorHash = Animator.StringToHash("Jump");
  
     void Start()
     {
