@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference runInputAction;
     [SerializeField] InputActionReference jumpInputAction;
     //[SerializeField] InputActionReference interactInputAction;
+    //[SerializeField] InputActionReference attackInputAction;
         
     [Header("Running Settings")]
     [SerializeField] float movementSpeed;
