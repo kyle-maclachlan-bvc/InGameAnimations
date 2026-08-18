@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [DefaultExecutionOrder(-1)]
-public class PlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     #region Class Variables
     [Header("Components")]
